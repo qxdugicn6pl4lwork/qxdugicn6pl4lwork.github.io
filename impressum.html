@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
     <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="author" content="Joerg Neikes">
     <link rel="icon" href="images/favicon.ico">
 
     <title>Meine erste eigene Website</title>
@@ -22,6 +22,11 @@
       
     <!-- Eigenes CSS -->  
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/boxes.css" rel="stylesheet">
+      
+    
+    <!-- crypt email-->  
+    <script src="js/javacrypt.js"></script>
   </head>
 
   <body>
@@ -54,32 +59,38 @@
     </nav>
 
     <div class="container">
-
-      <div class="inhalt">
-        <h1>Mein Blog</h1>
-        <p class="lead">Hier kommen dann alle Inhalte der Blog-Startseite hinein.</p>
-      </div>
-        	<!--  Text: [begin] -->
-			<div class="booksbox"><p class="bodytext"><br><b>Verantwortlich für den Inhalt dieser privaten Seite ist:</b>
-</p>
-<p class="bodytext">Jörg Neikes
-</p>
-<p class="bodytext">Kerbelweg 10
-</p>
-<p class="bodytext">41516 Grevenbroich
-</p>
-<p class="bodytext">Germany <a href="javascript:linkTo_UnCryptMailto('nbjmup+yfopjtuAxfc/ef');" title="Öffnet ein Fenster zum Versenden der E-Mail" class="mail">xenoist&nbsp;at&nbsp;web.de</a>
-</p>
-<p class="bodytext">&nbsp;</p></div>
-		<!--  Text: [end] -->
-			</div>
-
-    </div><!-- /.container -->
-
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="row">
+                    <div class="col-md-10">                        
+                        <div class="inhalt">
+                            <h1>Impressum</h1>
+                            <p class="lead">Verantwortlich f&uuml;r den Inhalt dieser privaten Seite ist:</p>
+                        </div>
+                        <!--  Text: [begin] -->
+                        <div class="row">
+                        <div class="col-md-7">
+                            <div class="addressbox">
+                                <p>
+                                    Jörg Neikes <br />
+                                    Kerbelweg 10<br />
+                                    <br />
+                                    41516 Grevenbroich<br />
+                                    <a href="javascript:linkTo_UnCryptMailto('ocknvq<zgpqkuvBygd0fg', 2);" title="Öffnet ein Fenster zum Versenden der E-Mail">xenoist&nbsp;at&nbsp;web.de</a></p>
+                                <!--  Text: [end] -->
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div><!-- /.container -->
+          
 
     <!-- Bootstrap Haupt-JavaScript -->
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.js"></script>
-    <script src="js/javacrypt.js"></script>
+    
   </body>
 </html>     
