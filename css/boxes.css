@@ -1,6 +1,7 @@
 .addressbox {
     background-image: url("../images/old-paper-small.png");
     background-attachment: scroll;
+    border: 2px solid #4D31FF;
     border-radius: 10px;
     box-shadow: 6px 6px 4px 2px #888;
     color: #000000;
@@ -8,4 +9,16 @@
     font-family:  courier;
     font-size: 115%;
     padding: 12px;
+}
+
+.shellbox {
+    background-color: #2FFFA1;
+    background-image: url("../images/black.png");
+    background-repeat: scroll;
+    border: 2px solid #00F40D;
+    border-radius: 15px;
+    box-shadow: 6px 6px 4px 2px #888;
+    color: #FFFFFF;
+    font-family: courier;
+    padding: 10px;
 }
