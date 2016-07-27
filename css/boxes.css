@@ -1,6 +1,7 @@
 .addressbox {
     background-image: url("../images/old-paper-small.png");
     background-attachment: scroll;
+    background-repeat: repeat;
     border: 2px solid #4D31FF;
     border-radius: 10px;
     box-shadow: 6px 6px 4px 2px #888;
@@ -12,10 +13,11 @@
 }
 
 .shellbox {
-    background-color: #2FFFA1;
+    background-color: #000000;
     background-image: url("../images/black.png");
-    background-repeat: scroll;
-    border: 2px solid #00F40D;
+    background-attachment: scroll;
+    background-repeat: repeat;
+    border: 2px solid #2FFFA1;
     border-radius: 15px;
     box-shadow: 6px 6px 4px 2px #888;
     color: #FFFFFF;
