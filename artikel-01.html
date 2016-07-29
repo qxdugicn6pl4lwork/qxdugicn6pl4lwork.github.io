@@ -7,12 +7,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
       
     <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="css/tooltip-addons/bootstrap.min.css">
+      <script src="js/tooltip-addons/jquery.min.js"></script>
+      <script src="js/tooltip-addons/bootstrap.min.js"></script>
     
-    <meta name="description" content="">
+    <meta name="description" content="Kodi IPTV">
     <meta name="author" content="Joerg Neikes">
     <link rel="icon" href="images/favicon.ico">
 
-    <title>Meine erste eigene Website</title>
+    <title>In KODI freie Programme per IPTV Client aktivieren</title>
 
     <!-- Bootstrap Haupt-CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
@@ -44,7 +47,16 @@
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
             <li><a href="index.html">Startseite</a></li>
-            <li class="active"><a href="ueber-mich.html">Über mich</a></li>
+              <li class="dropdown">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">Artikel
+                      <span class="caret"></span></a> 
+                  <ul class="dropdown-menu">
+                      <li> <a href="artikel-03.html">Artikel-03</a></li>
+                      <li> <a href="artikel-02.html">Artikel-02</a></li>
+                      <li class="active"> <a href="artikel-01.html">Artikel-01</a></li>
+                  </ul>
+              </li>
+            <li><a href="ueber-mich.html">Über mich</a></li>
             <li><a href="kontakt.html">Kontakt</a></li>
             <li><a href="impressum.html">Impressum</a></li>
           </ul>
@@ -57,26 +69,46 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="inhalt">
-                    <h1>Meine Reise nach Potsdam</h1>
-                    <p class="lead">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-                    <small class="artikel-metadata">Von J&ouml;rg Neikes am 20.07.2016 veröffentlicht.</small>
-                    <img src="images/potsdam.jpg" class="profilbild_image img-responsive">
-                    <p class="bildunterschrift"><small>Potsdam CC Bild von JackandBone <a href="http://www.potsdamlove.de/?p=13">http://www.potsdamlove.de/?p=13</a></small></p>
-                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                    <h1>Das Problem mit Stahlbeton und DVB-T</h1>
+                    <p class="lead">Leider sind unsere W&auml;nde zu stark und die Fenster auch zu gut isoliert, als das DVB-T per Zimemrantenne vern&uuml;nfig zu empfangen w&auml;re. Also musste eine andere L&ouml;sung her. Einen <abbr title="Raspberry Pi ist ein Produkt der Raspberry Pi Foundation">Raspberry Pi</abbr> mit einem DVB-T Stick unter dem Dach als Programmverteiler zu nutzen war der erste Ansatz. Dieser löste sich aber nach gut einer Woche in Wohlgefallen auf, da der <abbr title="Raspberry Pi ist ein Produkt der Raspberry Pi Foundation">Raspberry Pi</abbr> andauernd den DVB-T Stick verlor. Die Alternative war <abbr title="KODI ist ein Software Produkt der XBMC Foundation">KODI</abbr>. Auf vielen Ger&auml;ten mit ARM Prozessor ausf&uuml;hrbar. Sogar auf Handy's und Tablets.</p>
+                    <small class="artikel-metadata">Von J&ouml;rg Neikes am 29.07.2016 veröffentlicht.</small>
+                    <a href="https://kodi.tv/" alt="Link zur KODI Homepage" target="_blank" title="KODI Homepge">
+                    <img src="images/artikel-01/KODI-light-transparent.png" class="profilbild_image img-responsive" alt="KODI light-transparent png Datei" ></a>
+                    <p class="bildunterschrift"><small>KODI is a registered trademark of the XBMC Foundation. This Logo is a unregistered trademark Logo of the XBMC Foundation.<a href="https://kodi.wiki/view/Official:List_of_Foundation_Trademarks">https://kodi.wiki/view/Official:List_of_Foundation_Trademarks</a></small></p>
                     
-                    <p>At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.   Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-                    
-                    <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. </p>
-                    <p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-                    
-                    <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis.</p>
-                    
-                    <p>At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, At accusam aliquyam diam diam dolore dolores duo eirmod eos erat, et nonumy sed tempor et et invidunt justo labore Stet clita ea et gubergren, kasd magna no rebum. sanctus sea sed takimata ut vero voluptua. est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur</p>
+                    <img src="images/artikel-01/screenshots/01-kodi-start.png" class="profilbild_image_normal img-responsive" alt="KODI 01 start png Datei" >
+                    <p></p>
+                    <img src="images/artikel-01/screenshots/02-einstellungen-auswaehlen.png" class="profilbild_image_normal img-responsive" alt="KODI 02 Einstellungen auswählen png Datei" >
+                    <p></p>
+                    <img src="images/artikel-01/screenshots/03-tv-plugin-einschalten.png" class="profilbild_image_normal img-responsive" alt="KODI 03 TV Plugin einschalten png Datei" >
+                    <p></p>
+                    <img src="images/artikel-01/screenshots/04-iptv-simple-client.png" class="profilbild_image_normal img-responsive" alt="KODI 04 IPTV simple client 1 png Datei" >
+                    <p></p>
+                    <img src="images/artikel-01/screenshots/05-iptv-simple-client.png" class="profilbild_image_normal img-responsive" alt="KODI 05 IPTV simple client 2 Datei" >
+                    <p></p>
+                    <img src="images/artikel-01/screenshots/06-iptv-simple-client-enable.png" class="profilbild_image_normal img-responsive" alt="KODI 06 IPTV simple client aktivieren png Datei" >
+                    <p></p>
+                    <img src="images/artikel-01/screenshots/07-iptv-simple-client-general-default.png" class="profilbild_image_normal img-responsive" alt="KODI 07 IPTV simple client generelle Ansicht png Datei" >
+                    <p></p>
+                    <img src="images/artikel-01/screenshots/08-iptv-simple-client-general-mu3.png" class="profilbild_image_normal img-responsive" alt="KODI 08 IPTV simple client MU3 ausgefüllt png Datei" >
+                    <p></p>
+                    <img src="images/artikel-01/screenshots/09-iptv-simple-client-epg.png" class="profilbild_image_normal img-responsive" alt="KODI 09 IPTV simple client EPG ausgefüllt png Datei" >
+                    <p></p>
+                    <img src="images/artikel-01/screenshots/10-iptv-simple-client-logo.png" class="profilbild_image_normal img-responsive" alt="KODI 10 IPTV simple client Logos ausgefüllt png Datei" >
+                    <p></p>
+                    <img src="images/artikel-01/screenshots/11-iptv-simple-client-laedt-kanaele.png" class="profilbild_image_normal img-responsive" alt="KODI 11 IPTV Client lädt Kanäle png Datei" >
+                    <p></p>
+                    <img src="images/artikel-01/screenshots/12-kodi-tv-reiter.png" class="profilbild_image_normal img-responsive" alt="KODI 12 TV Reiter im Hauptmenü png Datei" >
+                    <p></p>
+                    <img src="images/artikel-01/screenshots/13-iptv-simple-client-kanaele.png" class="profilbild_image_normal img-responsive" alt="KODI 13 IPTV Plugin im Client Betrieb png Datei" >
+                    <p></p>
                  
                     </div>          
                 </div>
             </div>
-        </div>
+        <ul class="pager">
+            <li class="next"> <a href="artikel-02.html"data-toggle="tooltip" data-placement="top" title="Eine Seite weiter">n&auml;chste Seite</a></li>
+        </ul>
       </div><!-- /.container -->
       
 
@@ -84,5 +116,7 @@
     <!-- Bootstrap Haupt-JavaScript -->
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.js"></script>
+    <!-- tootltip -->
+    <script src="js/tooltip-addons/tooltip.js"></script>
   </body>
 </html>     

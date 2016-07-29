@@ -24,3 +24,20 @@
     font-family: courier;
     padding: 10px;
 }
+
+.blinkingcoursor {
+    -webkit-animation: blink 1s step-end infinite;
+            animation: blink 2s step-end infinite;
+}
+
+/* Chrome, Safari, Opera */
+/* @-webkit-keyframes blink { 50% { visibility: hidden; }} */
+        @keyframes blink { 50% { visibility: hidden; }}
+
+/* set BLACK VERTICAL RECTANGLE */
+/* <span class="blinkingcoursor">&#9646;</span> */
+
+/* set WHITE VERTICAL RECTANGLE */
+/* <span class="blinkingcoursor">&#9647;</span> */
+
+/* For more see http://www.sonderzeichen.de/geometrische-Formen-Alphabet.html */
