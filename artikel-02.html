@@ -11,11 +11,11 @@
       <script src="js/tooltip-addons/jquery.min.js"></script>
       <script src="js/tooltip-addons/bootstrap.min.js"></script>
     
-    <meta name="description" content="Raspberry Pi, Volumio, HiFiBerry DAC+ RCA, LCD und TP MR3020">
+    <meta name="description" content="Raspberry Pi, Volumio, HiFiBerry DAC+ RCA, LCD und TL-MR3020">
     <meta name="author" content="Joerg Neikes">
     <link rel="icon" href="images/favicon.ico">
 
-    <title>Raspberry Pi mit HiFiBerry DAC+ Standard RCA LCD Anzeige und TP MR3020</title>
+    <title>Raspberry Pi mit HiFiBerry DAC+ Standard RCA LCD Anzeige und TL-MR3020</title>
 
     <!-- Bootstrap Haupt-CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
@@ -27,6 +27,9 @@
     <link href="css/style.css" rel="stylesheet">
     <link href="css/boxes.css" rel="stylesheet">   
     
+    <!-- tooltip -->
+    <script src="js/tooltip.js"></script>
+      
   </head>
     
   <body>
@@ -62,10 +65,10 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="inhalt">
-                    <h1>Raspberry Pi mit HiFiBerry DAC+ Standard RCA, Volumio, LCD Anzeige und TP MR3020</h1>
+                    <h1>Raspberry Pi mit HiFiBerry DAC+ Standard RCA, Volumio, LCD Anzeige und TL-MR3020</h1>
                     <p class="lead"></p>
                     <small class="artikel-metadata">Von J&ouml;rg Neikes am 30.07.2016 veröffentlicht.</small>
-                    <img src="images/artikel-02/hifiberry-lego/hifiberry-LED-2.jpg" class="profilbild_image img-responsive">
+                    <img src="images/artikel-02/hifiberry-lego/hifiberry-LED-2.jpg" class="profilbild_image img-responsive" alt="Raspberry Pi nit HiFiBerry DAC+ und TL-MR3020">
                     <p class="bildunterschrift">Der Raspberry Pi als mitnehmbare Soundstation.</p>
                     <p>Ja, es ist Lego, der Klassiker wenn mal eben was braucht um einen Raspberry Pi zu verkleiden, weil die Geh&auml;se, die man hat wie immer natürlich nicht passen.</p>
                     
@@ -94,52 +97,62 @@
                     <p>You have to do the following things listed on https://learn.adafruit.com/adafruit-16x2-character-lcd-plus-keypad-for-raspberry-pi/usage</p>
                     
                     <div class="shellbox">
-                    sudo apt-get update <br>
-                    sudo apt-get install python-smbus<br>
-                    sudo apt-get install i2c-tools<br>
-                    sudo apt-get install build-essential python-dev python-smbus python-pip git<br>
-                    sudo pip install RPi.GPIO<br>
-                    git clone https://github.com/adafruit/Adafruit_Python_CharLCD.git<br>
-                    cd Adafruit_Python_CharLCD<br>
-                    sudo python setup.py install<br>
-                    </div>
+                        <span class="blinkingcoursor">$</span><br>
+                        sudo apt-get update <br>
+                        sudo apt-get install python-smbus<br>
+                        sudo apt-get install i2c-tools<br>
+                        sudo apt-get install build-essential python-dev python-smbus python-pip git<br>
+                        sudo pip install RPi.GPIO<br>
+                        git clone https://github.com/adafruit/Adafruit_Python_CharLCD.git<br>
+                        cd Adafruit_Python_CharLCD<br>
+                        sudo python setup.py install<br>
+                    </div><br>
                     
-                    <p>Install the packages, yes with updates!</p>
+                    <p>Bei der Frage, ob alle Pakete installiert werden sollen mit "yes" <kbd>y + Enter</kbd> antworten!</p>
                     
-                    add i2c-bcm2708 i2c-dev to /etc/modules
+                    <p>Folgendes muss noch in die Datei /etc/modules eingetragen werden: i2c-bcm2708 i2c-dev</p>
                     
-                    nano /etc/modules
+                    <p><kbd>nano /etc/modules + Enter</kbd></p>
                     
-                    i2c-bcm2708
-                    i2c-dev
+                    <div class="shellbox">
+                        i2c-bcm2708<br>
+                        i2c-dev
+                    </div><br>
                     
+                    <p>Nun noch die config.txt in /boot anpassen:</p>
+                    <p><kbd>nano /boot/config.txt + Enter</kbd></p>
+                    <div class="shellbox">
+                        device_tree=bcm2708-rpi-b.dtb<br>
+                        device_tree_param=i2c1=on<br>
+                        device_tree_param=spi=on<br>
+                        dtparam=i2c1=on<br>
+                        dtparam=i2c_arm=on<br>
+                    </div><br>
                     
-                    nano /boot/config.txt
-                    add 
-                    device_tree=bcm2708-rpi-b.dtb
-                    device_tree_param=i2c1=on
-                    device_tree_param=spi=on
-                    dtparam=i2c1=on
-                    dtparam=i2c_arm=on
+                    <h2>!!! <span class="alert-danger">Neustart</span> !!!</h2>
                     
-                    <p>!!! Neustart !!!</p>
+                    <p>Jetzt erst kann das script ausgeführt werden, da die entsprechenden Module geladen sind!</p>
                     
-                    sudo i2cdetect -y 1 # for new raspberry pi 2 Hardware revision 2 512MB
-                    or 
-                    sudo i2cdetect -y 0 # for old raspberry pi 1 Hardware revision 1 256MB
+                    <p><kbd>sudo i2cdetect -y 1 + Enter</kbd> # F&uuml;r die neue Raspberry Pi 2 Hardware Revision 2 512MB</p>
+                    <p>or</p>
+                    <p><kbd>sudo i2cdetect -y 0 +Enter</kbd> # F&uuml;r die alte Raspberry Pi 1 Hardware Revision 1 256MB</p>
                     
-                    Copy the lcdSongInfo.py file to Adafruit_CharLCDPlate directory.
-                    
-                    <p>Create the autostart with: sudo crontab -e
+                    <p>Kopiert nun die lcdSongInfo.py Datei ins Adafruit_CharLCDPlate Verzeichnis.</p>
+                    <div class="shellbox">
+                        <span class="blinkingcoursor">$</span><br>
+                        cp lcdSongInfo.py /home/volumio/Adafruit_CharLCDPlate/
+                    </div><br>
+                    <p>Damit das Script nicht immer per Hand gestartet werden muss legen wir noch einen Autostart an:</p>
+                    <p><kbd>sudo crontab -e + Enter</kbd></p>
+                    <div class="shellbox">                        
                         @reboot sudo python /home/volumio/Adafruit_CharLCDPlate/lcdSongInfo.py
-                        
-                        Now set up your Volumio and reboot.
-                        The LCD starts automatically.</p>
+                    </div><br>
+                    <p>Nun noch das Volumio System konfigurieren und neustarten. Das LCD startet automatisch.</p>
                 </div>
             </div>
             <ul class="pager">
                 <li class="previous"> <a href="artikel-01.html" data-toggle="tooltip" data-placement="top" title="Eine Seite                        zur&uuml;ck">&#x2906; Seite</a></li>
-                <li class="next"> <a href="artikel-03.html"data-toggle="tooltip" data-placement="top" title="Eine Seite weiter">Seite &#x2907;</a></li>
+                <li class="next"> <a href="artikel-03.html" data-toggle="tooltip" data-placement="top" title="Eine Seite weiter">Seite &#x2907;</a></li>
             </ul>
         </div>
       </div><!-- /.container -->
