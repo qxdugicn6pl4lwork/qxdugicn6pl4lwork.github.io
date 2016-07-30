@@ -12,8 +12,8 @@
     <meta name="author" content="Joerg Neikes">
     <link rel="icon" href="images/favicon.ico">
 
-    <title>Meine erste eigene Website</title>
-
+    <title>Datenschutz</title>
+    
     <!-- Bootstrap Haupt-CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
 
@@ -22,6 +22,13 @@
       
     <!-- Eigenes CSS -->  
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/boxes.css" rel="stylesheet">   
+    
+    <!-- tooltip -->
+    <script src="js/tooltip-addons/tooltip.js"></script>
+      
+    <!-- back-to-top -->
+    <script src="js/back-to-top.js"></script>
   </head>
 
   <body>
@@ -56,7 +63,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
-                <article class="ersterartikel artikel">
+                <div class="inhalt">
                     <div class="row">
                         <div class="col-md-8">
                             <h1><strong>Datenschutzerkl&auml;rung</strong></h1>
@@ -84,9 +91,10 @@
                             <h4><strong>Widerruf, Änderungen, Berichtigungen und Aktualisierungen</strong></h4>
                             <p>Der Nutzer hat das Recht, auf Antrag unentgeltlich Auskunft zu erhalten über die personenbezogenen Daten, die über ihn gespeichert wurden. Zusätzlich hat der Nutzer das Recht auf Berichtigung unrichtiger Daten, Sperrung und Löschung seiner personenbezogenen Daten, soweit dem keine gesetzliche Aufbewahrungspflicht entgegensteht.<br />              </p>
                             <p><a href="http://rechtsanwalt-schwenke.de/smmr-buch/datenschutz-muster-generator-fuer-webseiten-blogs-und-social-media/"><strong>Datenschutz-Muster von Rechtsanwalt Thomas Schwenke - I LAW it</strong></a></p>
+                            <a id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" title="Click to return on the top page" data-toggle="tooltip" data-placement="left"><span class="glyphicon glyphicon-chevron-up"></span></a>
                         </div>                        
-                    </div>          
-                </article>
+                    </div>                    
+                </div>                
             </div>
         </div>
       </div><!-- /.container -->
