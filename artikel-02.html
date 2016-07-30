@@ -25,9 +25,8 @@
       
     <!-- Eigenes CSS -->  
     <link href="css/style.css" rel="stylesheet">
-      
-    <!-- tootltip -->
-    <script src="js/tooltip.js"></script>
+    <link href="css/boxes.css" rel="stylesheet">   
+    
   </head>
     
   <body>
@@ -87,38 +86,43 @@
                     
                     <p>Ich werde hier nur die &Auml;nderungen beschreiben, die von der Standard installation abweicht.
                     Eine Englische Version ist in meinem Github Repository zu finden unter: <a href="https://github.com/androdev4u/scripts/tree/master/raspberry/Volumio-LCD" target="_blank">Volumio-LCD</a></p>
-                    <p>The code Adafruit_CharLCDPlate is from: https://github.com/spotrh/rpihacks/tree/master/Adafruit_CharLCDPlate
-                        This Code comes from R.U.Sirius and was fixed by aubreykloppers.See https://aubreykloppers.wordpress.com/2014/01/30/raspberry-pi-volumio-a-new-music-player-and-it-works-out-the-box.</p>
-                    <p>The showSongInfo.py is originaly from http://didtheypush.blogspot.de/2013/10/raspyfi-and-adafruit-16x2-char-lcd-plate.html
-                        A fixed version from https://www.dropbox.com/s/iqoyy5lm2tik1my/LCD%20Python%20Script.zip should be used.
-                    </p>
-                    <p>I worked in the /home/volumio folder!</p>
+                    <p>Der Kode f&uuml;r das Adafruit_CharLCDPlate ist von: <a href="https://github.com/spotrh/rpihacks/tree/master/Adafruit_CharLCDPlate" target="_blank">https://github.com/spotrh/rpihacks/tree/master/Adafruit_CharLCDPlate</a></p>
+                    <p>Geschriben wurde das von  R.U.Sirius und wurde gefixed von aubreykloppers. F&uuml;r mehr Informationen siehe: <a href="https://aubreykloppers.wordpress.com/2014/01/30/raspberry-pi-volumio-a-new-music-player-and-it-works-out-the-box" target="_blank">https://aubreykloppers.wordpress.com/2014/01/30/raspberry-pi-volumio-a-new-music-player-and-it-works-out-the-box</a></p>
+                    <p>Das Python script showSongInfo.py ist im Original von <a href="http://didtheypush.blogspot.de/2013/10/raspyfi-and-adafruit-16x2-char-lcd-plate.html" target="_blank">http://didtheypush.blogspot.de/2013/10/raspyfi-and-adafruit-16x2-char-lcd-plate.html</a></p>
+                    <p>Die reparierte Version von <a href="https://www.dropbox.com/s/iqoyy5lm2tik1my/LCD%20Python%20Script.zip">https://www.dropbox.com/s/iqoyy5lm2tik1my/LCD%20Python%20Script.zip</a> sollte benutzt werden!</p>
+                    <p>Alle Arbeiten wurden im /home/volumio Ordner auf dem Raspberry Pi ausgef&uuml;hrt!</p>
                     <p>You have to do the following things listed on https://learn.adafruit.com/adafruit-16x2-character-lcd-plus-keypad-for-raspberry-pi/usage</p>
                     
-                    sudo apt-get update
-                    sudo apt-get install python-smbus
-                    sudo apt-get install i2c-tools
-                    sudo apt-get install build-essential python-dev python-smbus python-pip git
-                    sudo pip install RPi.GPIO
-                    git clone https://github.com/adafruit/Adafruit_Python_CharLCD.git
-                    cd Adafruit_Python_CharLCD
-                    sudo python setup.py install
+                    <div class="shellbox">
+                    sudo apt-get update <br>
+                    sudo apt-get install python-smbus<br>
+                    sudo apt-get install i2c-tools<br>
+                    sudo apt-get install build-essential python-dev python-smbus python-pip git<br>
+                    sudo pip install RPi.GPIO<br>
+                    git clone https://github.com/adafruit/Adafruit_Python_CharLCD.git<br>
+                    cd Adafruit_Python_CharLCD<br>
+                    sudo python setup.py install<br>
+                    </div>
                     
-                    Install the packages, yes with updates!
+                    <p>Install the packages, yes with updates!</p>
+                    
+                    add i2c-bcm2708 i2c-dev to /etc/modules
                     
                     nano /etc/modules
                     
-                    add i2c-bcm2708 i2c-dev
+                    i2c-bcm2708
+                    i2c-dev
+                    
+                    
                     nano /boot/config.txt
                     add 
-                    
                     device_tree=bcm2708-rpi-b.dtb
                     device_tree_param=i2c1=on
                     device_tree_param=spi=on
                     dtparam=i2c1=on
                     dtparam=i2c_arm=on
                     
-                    !!! Reboot !!!
+                    <p>!!! Neustart !!!</p>
                     
                     sudo i2cdetect -y 1 # for new raspberry pi 2 Hardware revision 2 512MB
                     or 
@@ -145,7 +149,5 @@
     <!-- Bootstrap Haupt-JavaScript -->
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.js"></script>
-    <!-- tootltip -->
-    <script src="js/tooltip-addons/tooltip.js"></script>
   </body>
 </html>     
