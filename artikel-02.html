@@ -103,6 +103,7 @@
                     <p>Folgendes hier aufgelistetes <a href="https://learn.adafruit.com/adafruit-16x2-character-lcd-plus-keypad-for-raspberry-pi/usage" title="Link zur adafruit Webseite">https://learn.adafruit.com/adafruit-16x2-character-lcd-plus-keypad-for-raspberry-pi/usage</a> m&uuml;sst ihr auf dem <abbr title="Raspberry Pi ist ein Produkt der Raspberry Pi Foundation">Raspberry Pi</abbr></p>
                     
                     <div class="shellbox">
+                        <p>
                         <span class="blinkingcoursor">$</span><br>
                         sudo apt-get update <br>
                         sudo apt-get install python-smbus<br>
@@ -111,7 +112,7 @@
                         sudo pip install RPi.GPIO<br>
                         git clone https://github.com/adafruit/Adafruit_Python_CharLCD.git<br>
                         cd Adafruit_Python_CharLCD<br>
-                        sudo python setup.py install<br>
+                        sudo python setup.py install<br></p>
                     </div><br>
                     
                     <p>Bei der Frage, ob alle Pakete installiert werden sollen mit "yes" <kbd>y + Enter</kbd> antworten!</p>
@@ -121,18 +122,21 @@
                     <p><kbd>nano /etc/modules + Enter</kbd></p>
                     
                     <div class="shellbox">
+                        <p>
                         i2c-bcm2708<br>
                         i2c-dev
+                        </p>
                     </div><br>
                     
                     <p>Nun noch die config.txt in /boot anpassen:</p>
                     <p><kbd>nano /boot/config.txt + Enter</kbd></p>
                     <div class="shellbox">
+                        <p>
                         device_tree=bcm2708-rpi-b.dtb<br>
                         device_tree_param=i2c1=on<br>
                         device_tree_param=spi=on<br>
                         dtparam=i2c1=on<br>
-                        dtparam=i2c_arm=on<br>
+                        dtparam=i2c_arm=on<br></p>
                     </div><br>
                     
                     <h2>!!! <span class="alert-danger">Neustart</span> !!!</h2>
@@ -145,18 +149,21 @@
                     
                     <p>Kopiert nun die lcdSongInfo.py Datei ins Adafruit_CharLCDPlate Verzeichnis.</p>
                     <div class="shellbox">
+                        <p>
                         <span class="blinkingcoursor">$</span><br>
                         cp lcdSongInfo.py /home/volumio/Adafruit_CharLCDPlate/
+                        </p>
                     </div><br>
                     <p>Damit das Script nicht immer per Hand gestartet werden muss legen wir noch einen Autostart an:</p>
                     <p><kbd>sudo crontab -e + Enter</kbd></p>
-                    <div class="shellbox">                        
+                    <div class="shellbox"><p>
                         @reboot sudo python /home/volumio/Adafruit_CharLCDPlate/lcdSongInfo.py
+                        </p>
                     </div><br>
                     <p>Nun noch das Volumio System konfigurieren und neustarten. Das LCD startet automatisch.</p>
                     <img src="images/artikel-02/hifiberry-lego/hifiberry-LED-1.jpg" class="profilbild_image img-responsive" alt="Raspberry Pi mit HiFiBerry DAC+ ">
                 </div>
-                <a id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" title="Click to return on the top page" data-toggle="tooltip" data-placement="left"><span class="glyphicon glyphicon-chevron-up"></span></a>
+                
 
                 <ul class="pager">
                 <li class="previous"> <a href="artikel-01.html" data-toggle="tooltip" data-placement="top" title="Eine Seite                        zur&uuml;ck">&#x2906; Seite</a></li>
@@ -165,6 +172,7 @@
             </div>            
         </div>
       </div><!-- /.container -->
+      <a id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" title="Zur&uuml;ck nach oben" data-toggle="tooltip" data-placement="left"><span class="glyphicon glyphicon-chevron-up"></span></a>
       
 
 
