@@ -45,7 +45,12 @@
 }
 
 .back-to-top:hoover {
-    color: black;    
+    color: black;
+    cursor: pointer;
+    position: fixed;
+    bottom: 55px;
+    right: 20px;
+    display:none;
     opacity: 1;
 }
 
