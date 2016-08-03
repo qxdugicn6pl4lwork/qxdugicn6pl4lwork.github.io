@@ -1,25 +1,25 @@
 .inhalt {
-    margin-top: 80px;
+    margin-to-top: 80px;
 }
 
 .profilbild_image {
     border-radius: 1000px;
-    margin-top: 20px;
+    margin-to-top: 20px;
     box-shadow: 10px 10px 5px grey;
 }
 
 .profilbild_image_normal {
     border-radius: 10px;
-    margin-top: 20px;
+    margin-to-top: 20px;
     box-shadow: 10px 10px 5px grey;
 }
 
 .artikel-metadata {
-    margin-top: 20px;
+    margin-to-top: 20px;
 }
 .artikelbild {
     border-radius: 10px;
-    margin-top: 20px;
+    margin-to-top: 20px;
     margin-bottom: 20px;
     box-shadow: 5px 5px 2px grey;
 }
@@ -29,10 +29,10 @@
 }
 
 .ersterartikel {
-    margin-top: 80px;
+    margin-to-top: 80px;
 }
 
-.back-to-top {
+.back-to-to-top {
     background-image: url("../images/old-paper-small.png");
     color: black;
     cursor: pointer;
@@ -40,13 +40,45 @@
     bottom: 55px;
     right: 20px;
     display:none;
-    opacity:0.83;
-    filter:alpha(opacity=83);
+    opacity:0.75;
+    filter:alpha(opacity=75);
 }
 
-.back-to-top:hover {
-    color: cadetblue;
+.back-to-top.back-is-visible, .back-to-top.back-fade-out, .no-touch .back-to-top:hover {
+  -webkit-transition: opacity .3s 0s, visibility 0s 0s;
+  -moz-transition: opacity .3s 0s, visibility 0s 0s;
+  transition: opacity .3s 0s, visibility 0s 0s;
 }
+.back-to-top.back-is-visible {
+  /* the button becomes visible */
+  visibility: visible;
+  opacity: 1;
+}
+.back-to-top.back-fade-out {
+  /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
+  opacity: .5;
+}
+.no-touch .back-to-top:hover {
+  background-color: #e86256;
+  opacity: 1;
+}
+@media only screen and (min-width: 768px) {
+  .back-to-top {
+    right: 20px;
+    bottom: 20px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .back-to-top {
+    height: 60px;
+    width: 60px;
+    right: 30px;
+    bottom: 30px;
+  }
+}
+
+
+
 .addressbox {
     background-image: url("../images/old-paper-small.png");
     background-attachment: scroll;
@@ -145,7 +177,7 @@ p.break {
 
 ul.nav li.dropdown:hover ul.dropdown-menu{
 	display:  block;
-	margin-top:0px;
+	margin-to-top:0px;
 }
 
 ul.dropdown-menu>li.active>a{
