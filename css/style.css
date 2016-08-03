@@ -34,7 +34,7 @@
 
 .back-to-top {
     background-image: url("../images/old-paper-small.png");
-    color: burlywood;
+    color: darkgray;
     cursor: pointer;
     position: fixed;
     bottom: 55px;
