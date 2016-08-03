@@ -134,7 +134,7 @@ p.break {
 
 
 ul.nav li.dropdown:hover ul.dropdown-menu{
-	display:  inline-block;
+	display:  block;
 	margin-top:0px;
 }
 
