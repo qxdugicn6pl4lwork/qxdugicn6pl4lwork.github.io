@@ -43,6 +43,10 @@
     opacity:0.83;
     filter:alpha(opacity=83);
 }
+
+.back-to-top:hover {
+    color: cadetblue;
+}
 .addressbox {
     background-image: url("../images/old-paper-small.png");
     background-attachment: scroll;
