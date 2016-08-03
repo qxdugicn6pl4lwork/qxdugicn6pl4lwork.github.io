@@ -5,11 +5,13 @@
 .profilbild_image {
     border-radius: 1000px;
     margin-top: 20px;
+    box-shadow: 10px 10px 5px grey;
 }
 
 .profilbild_image_normal {
     border-radius: 10px;
     margin-top: 20px;
+    box-shadow: 10px 10px 5px grey;
 }
 
 .artikel-metadata {
