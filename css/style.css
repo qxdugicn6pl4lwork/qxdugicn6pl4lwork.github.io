@@ -145,14 +145,14 @@ ul.dropdown-menu>li.active>a{
 }
 
 ul.dropdown-menu>li>a:hover{
-    background: rgba(47,255,161,0.7) !important;
+    background: rgba(255,248,211,0.7) !important;
     color: darkslategray;
     box-shadow: 10px 10px 5px grey;
 }
 
 
 ul.dropdown-menu>li.active>a:hover{
-    background: rgba(47,255,161,0.7) !important;
+    background: rgba(255,248,211,0.7) !important;
     color: darkslategray;
     box-shadow: 10px 10px 5px grey;
 }
