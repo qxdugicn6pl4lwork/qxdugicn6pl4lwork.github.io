@@ -44,9 +44,9 @@
     filter:alpha(opacity=65);
 }
 
-.back-to-top:hover {
-  background-color: #e86256;
-  opacity: 1;
+.back-to-top:hoover {
+    color: black;    
+    opacity: 1;
 }
 
 .addressbox {
