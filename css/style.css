@@ -46,8 +46,8 @@
 
 .back-to-top:hoover {
     color: black;
-        opacity:2;
-    filter:alpha(opacity=200);
+        opacity:0;
+    filter:alpha(opacity=0);
 }
 
 
