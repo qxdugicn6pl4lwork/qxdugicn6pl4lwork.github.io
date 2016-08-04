@@ -1,57 +1,114 @@
 .inhalt {
-    margin-to-top: 80px;
+    margin-top: 80px;
 }
 
 .profilbild_image {
     border-radius: 1000px;
-    margin-to-top: 20px;
+    margin-top: 20px;
     box-shadow: 10px 10px 5px grey;
 }
 
 .profilbild_image_normal {
     border-radius: 10px;
-    margin-to-top: 20px;
+    margin-top: 20px;
     box-shadow: 10px 10px 5px grey;
 }
 
 .artikel-metadata {
-    margin-to-top: 20px;
+    margin-top: 20px;
 }
 .artikelbild {
-    border-radius: 10px;
-    margin-to-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
     box-shadow: 5px 5px 2px grey;
 }
 
 .bildunterschrift {
+    margin-top: 10px;
     margin-bottom: 20px;
 }
 
 .ersterartikel {
-    margin-to-top: 80px;
+    margin-top: 80px;
 }
 
+
 .back-to-top {
-    background-image: url("../images/old-paper-small.png");
     color: darkgray;
-    cursor: pointer;
     position: fixed;
     bottom: 55px;
     right: 20px;
-    display:none;
-    opacity:0.65;
-    filter:alpha(opacity=65);
+    
+    /* image replacement properties */
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+    background: url(../images/cd-top-arrow.svg) no-repeat center 50%;
+    background-color: lightgray;
+    -webkit-transition: opacity .3s 0s, visibility 0s .3s;
+    -moz-transition: opacity .3s 0s, visibility 0s .3s;
+    transition: opacity .3s 0s, visibility 0s .3s
 }
 
-.back-to-top:hoover { 
-    color: black;
-    opacity:0;
-    filter:alpha(opacity=0);
-    
-    
+
+
+.back-to-top.back-is-visible, .back-to-top.back-fade-out, .no-touch .back-to-top:hover {
+    -webkit-transition: opacity .3s 0s, visibility 0s 0s; 
+    -moz-transition: opacity .3s 0s, visibility 0s 0s;
+    transition: opacity .3s 0s, visibility 0s 0s;
 }
 
+
+.back-to-top.back-is-visible {
+    /* the button becomes visible */
+    visibility: visible;
+    opacity: 1;
+}
+.back-to-top.back-fade-out {
+    /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
+    opacity: .5;
+}
+.no-touch .back-to-top:hover {
+  background-color: #e86256;
+  opacity: 1;
+}
+.back-to-top:hover {
+    background: rgba(255, 255, 255, 1) url(../images/cd-top-arrow.svg) no-repeat center 50%;
+    background-color: #9f9f9f;
+    opacity: 1;
+}
+.back-to-top:active {
+    background: rgba(255, 255, 255, 1) url(../images/cd-top-arrow.svg) no-repeat center 50%;
+    background-color: #9f9f9f;
+    opacity: 1;
+}
+
+@media only screen and (min-width: 768px) {
+    .back-to-top {
+        right: 20px;
+        bottom: 20px;
+    }
+}
+@media only screen and (min-width: 1024px) {
+    .back-to-top {
+        height: 60px;
+        width: 60px;
+        right: 30px;
+        bottom: 30px;
+    }
+}
+
+/*This is modifying the btn-primary colors but you could create your own .btn-something class as well*/
+.btn-primary {
+   border:0px solid transparent; /* this was 1px earlier */
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
+    background: rgba(255, 255, 255, 1) url(../images/cd-top-arrow.svg) no-repeat center 50%;
+    background-color: #9f9f9f;
+    opacity: 1;
+    border:0px solid transparent; /* this was 1px earlier */
+}
 
 .addressbox {
     background-image: url("../images/old-paper-small.png");
@@ -84,10 +141,6 @@
     -webkit-animation: blink 1s step-end infinite;
             animation: blink 2s step-end infinite;
 }
-p.break {
-    word-wrap: break-all;
-}
-
 
 /* Chrome, Safari, Opera */
 /* @-webkit-keyframes blink { 50% { visibility: hidden; }} */
@@ -172,3 +225,6 @@ ul.dropdown-menu>li.active>a:hover{
     color: darkslategray;
     box-shadow: 10px 10px 5px grey;
 }
+
+
+
