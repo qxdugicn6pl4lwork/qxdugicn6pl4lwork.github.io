@@ -64,7 +64,7 @@
                   <a data-toggle="dropdown" class="dropdown-toggle" href="#">Artikel<b class="caret"></b></a>
                   <ul class="dropdown-menu dropdown-content">
                       <li><a href="artikel-01.html"><b>Artikel-01</b></a></li>
-                      <li class="active"><a href="artikel-02.html"></b>Artikel-02</b></a></li>
+                      <li class="active"><a href="artikel-02.html"><b>Artikel-02</b></a></li>
                       <li><a href="artikel-03.html"><b>Artikel-03</b></a></li>                
                   </ul>
               </li>
@@ -140,7 +140,7 @@
                     <p>Nun noch die config.txt in /boot anpassen:</p>
                     <p><kbd>nano /boot/config.txt + Enter</kbd></p>
                     <div class="shellbox">
-                        <p word-wrap: break-all>
+                        <p class="break">
                         device_tree=bcm2708-rpi-b.dtb<br>
                         device_tree_param=i2c1=on<br>
                         device_tree_param=spi=on<br>
@@ -158,7 +158,7 @@
                     
                     <p>Kopiert nun die lcdSongInfo.py Datei ins Adafruit_CharLCDPlate Verzeichnis.</p>
                     <div class="shellbox">
-                        <p word-wrap: break-all>
+                        <p class="break">
                         <span class="blinkingcoursor">$</span><br>
                         cp lcdSongInfo.py /home/volumio/Adafruit_CharLCDPlate/
                         </p>

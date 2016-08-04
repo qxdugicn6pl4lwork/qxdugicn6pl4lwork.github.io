@@ -140,8 +140,7 @@ html * {
 
 
 ul.nav li.dropdown:hover ul.dropdown-menu{
-	display:  block;
-	margin-to-top:0px;
+	display:  block;	
     background: rgba(128,148,150,0.5) !important;
 }
 ul.dropdown-menu>li{
