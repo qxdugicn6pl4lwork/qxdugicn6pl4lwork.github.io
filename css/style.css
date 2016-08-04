@@ -1,3 +1,14 @@
+html * {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 .inhalt {
     margin-top: 80px;
 }
@@ -33,84 +44,6 @@
     margin-top: 80px;
 }
 
-
-.back-to-top {
-    color: darkgray;
-    position: fixed;
-    bottom: 55px;
-    right: 20px;
-    
-    /* image replacement properties */
-    overflow: hidden;
-    text-indent: 100%;
-    white-space: nowrap;
-    background: url(../images/cd-top-arrow.svg) no-repeat center 50%;
-    background-color: lightgray;
-    -webkit-transition: opacity .3s 0s, visibility 0s .3s;
-    -moz-transition: opacity .3s 0s, visibility 0s .3s;
-    transition: opacity .3s 0s, visibility 0s .3s
-}
-
-
-
-.back-to-top.back-is-visible, .back-to-top.back-fade-out, .no-touch .back-to-top:hover {
-    -webkit-transition: opacity .3s 0s, visibility 0s 0s; 
-    -moz-transition: opacity .3s 0s, visibility 0s 0s;
-    transition: opacity .3s 0s, visibility 0s 0s;
-}
-
-
-.back-to-top.back-is-visible {
-    /* the button becomes visible */
-    visibility: visible;
-    opacity: 1;
-}
-.back-to-top.back-fade-out {
-    /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
-    opacity: .5;
-}
-.no-touch .back-to-top:hover {
-  background-color: #e86256;
-  opacity: 1;
-}
-.back-to-top:hover {
-    background: rgba(255, 255, 255, 1) url(../images/cd-top-arrow.svg) no-repeat center 50%;
-    background-color: #9f9f9f;
-    opacity: 1;
-}
-.back-to-top:active {
-    background: rgba(255, 255, 255, 1) url(../images/cd-top-arrow.svg) no-repeat center 50%;
-    background-color: #9f9f9f;
-    opacity: 1;
-}
-
-@media only screen and (min-width: 768px) {
-    .back-to-top {
-        right: 20px;
-        bottom: 20px;
-    }
-}
-@media only screen and (min-width: 1024px) {
-    .back-to-top {
-        height: 60px;
-        width: 60px;
-        right: 30px;
-        bottom: 30px;
-    }
-}
-
-/*This is modifying the btn-primary colors but you could create your own .btn-something class as well*/
-.btn-primary {
-   border:0px solid transparent; /* this was 1px earlier */
-}
-
-.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
-    background: rgba(255, 255, 255, 1) url(../images/cd-top-arrow.svg) no-repeat center 50%;
-    background-color: #9f9f9f;
-    opacity: 1;
-    border:0px solid transparent; /* this was 1px earlier */
-}
-
 .addressbox {
     background-image: url("../images/old-paper-small.png");
     background-attachment: scroll;
@@ -144,7 +77,7 @@
 }
 
 /* Chrome, Safari, Opera */
-/* @-webkit-keyframes blink { 50% { visibility: hidden; }} */
+ @-webkit-keyframes blink { 50% { visibility: hidden; }} 
         @keyframes blink { 50% { visibility: hidden; }}
 
 /* set BLACK VERTICAL RECTANGLE */
@@ -157,7 +90,7 @@
 
 .dropbtn {
     background-color: #333;
-    color: #9f9f9f;
+    color: rgba(115,123,127,0.5) !important;;
     padding: 16px;
     font-size: 16px;
     border: none;
@@ -169,12 +102,14 @@
 .dropdown {
     position: relative;
     display: inline-block;
-    }
+    
+}
 
 .dropdown-content {
     display: none;
     position: absolute;
     background-color: black;
+    color: white;
     min-width: 100px;
     box-shadow: 2px 8px 8px 2px rgba(0,0,0,0.4);
 }
@@ -184,21 +119,22 @@
     padding: 12px 16px;
     text-decoration: none;
     display: block;
+    
 }
 
 .dropdown-content a:hover {
-    background-color: #f1f1f1;
+    background-color: rgba(115,123,127,0.5);
     color: black;
 }
 
 .dropdown:hover .dropdown-content {
     display: block;
-    background-color: lightgray;
-    color: gray;   
+    background-color: rgba(115,123,127,0.5) !important;
+    color: white;   
 }
 
 .dropdown:hover .dropbtn {
-    background-color: gray;
+    background-color: rgba(115,123,127,0.5);
     color: black;
 }
 
@@ -206,26 +142,109 @@
 ul.nav li.dropdown:hover ul.dropdown-menu{
 	display:  block;
 	margin-to-top:0px;
+    background: rgba(128,148,150,0.5) !important;
 }
-
+ul.dropdown-menu>li{
+    background: rgba(115,123,127,0.5) !important;
+    
+    box-shadow: 2px 2px 2px grey;
+}
+ul.dropdown-menu>li>a{
+    color:white;
+}
 ul.dropdown-menu>li.active>a{
-    background: #333 !important;
+    background: rgba(51,51,51,0.8) !important;
     color: white;
-    box-shadow: 10px 10px 5px grey;
+    box-shadow: 1px 1px 1px grey;
 }
-
 ul.dropdown-menu>li>a:hover{
-    background: rgba(255,248,211,0.7) !important;
-    color: darkslategray;
-    box-shadow: 10px 10px 5px grey;
+    background: rgba(115,123,127,0.5) !important;
+    box-shadow: 1px 1px 1px grey;
+    color: white;
+    
 }
-
-
 ul.dropdown-menu>li.active>a:hover{
-    background: rgba(255,248,211,0.7) !important;
-    color: darkslategray;
-    box-shadow: 10px 10px 5px grey;
+    background: rgba(128,148,150,0.5) !important;
+    color: white;
+    box-shadow: 1px 1px 1px grey;
+}
+
+.back-to-top {
+    display: none;
+    color: darkgray;
+    position: fixed;
+    bottom: 55px;
+    right: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    /* image replacement properties */
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+    background: url(../images/cd-top-arrow.svg) no-repeat center 50%;
+    opacity:0.6;
+    filter:alpha(opacity=60);
+    background-color: lightgray;
+    -webkit-transition: opacity .3s 0s, visibility 0s .3s;
+    -moz-transition: opacity .3s 0s, visibility 0s .3s;
+    transition: opacity .3s 0s, visibility 0s .3s
 }
 
 
+.back-to-top.back-is-visible, .back-to-top.back-fade-out, .no-touch .back-to-top:hover {
+    -webkit-transition: opacity .3s 0s, visibility 0s 0s; 
+    -moz-transition: opacity .3s 0s, visibility 0s 0s;
+    transition: opacity .3s 0s, visibility 0s 0s;
+}
 
+ .back-to-top.back-is-visible { 
+    /* the button becomes visible */
+    visibility: visible;
+    opacity: 1;
+}
+.back-to-top.back-fade-out {
+    /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
+    opacity: .5;
+}
+
+/* .no-touch .back-to-top:hover {
+    background-color: #e86256;
+    opacity: 1;
+} */
+.back-to-top:hover {
+    background: rgba(255, 255, 255, 1) url(../images/cd-top-arrow.svg) no-repeat center 50%;
+    background-color: #9f9f9f;
+    opacity: 1;
+}
+.back-to-top:active {
+    background: rgba(255, 255, 255, 1) url(../images/cd-top-arrow.svg) no-repeat center 50%;
+    background-color: #9f9f9f;
+    opacity: 1;
+}
+
+@media only screen and (min-width: 768px) {
+    .back-to-top {
+        right: 20px;
+        bottom: 20px;
+    }
+}
+@media only screen and (min-width: 1024px) {
+    .back-to-top {
+        height: 60px;
+        width: 60px;
+        right: 30px;
+        bottom: 30px;
+    }
+}
+
+/*This is modifying the btn-primary colors but you could create your own .btn-something class as well*/
+ .btn-primary { 
+   border:0px solid transparent; /* this was 1px earlier */
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
+    background: rgba(255, 255, 255, 1) url(../images/cd-top-arrow.svg) no-repeat center 50%;
+    background-color: #9f9f9f;
+    opacity: 1;
+    border:0px solid transparent;
+/* this was 1px earlier */
+}
