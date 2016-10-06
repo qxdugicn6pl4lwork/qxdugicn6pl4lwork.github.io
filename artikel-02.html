@@ -57,17 +57,17 @@
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
             <li><a href="index.html">Startseite</a></li>
-            <li><a href="ueber-mich.html">Über mich</a></li>
-            <li><a href="datenschutz.html">Datenschutz</a></li>
-            <li><a href="impressum.html">Impressum</a></li>
               <li class="dropdown active">
                   <a data-toggle="dropdown" class="dropdown-toggle" href="#">Artikel<b class="caret"></b></a>
                   <ul class="dropdown-menu dropdown-content">
-                      <li><a href="artikel-01.html"><b>Artikel-01</b></a></li>
-                      <li class="active"><a href="artikel-02.html"><b>Artikel-02</b></a></li>
-                      <li><a href="artikel-03.html"><b>Artikel-03</b></a></li>                
+                      <li><a href="artikel-01.html"><b>DVB-T und Stahlbeton</b></a></li>
+                      <li class="active"><a href="artikel-02.html"><b>Raspberry Pi mit HiFyBerry</b></a></li>
+                      <li><a href="artikel-03.html"><b>Volumio mit dem Handy steuern</b></a></li>                
                   </ul>
               </li>
+            <li><a href="ueber-mich.html">Über mich</a></li>
+            <li><a href="datenschutz.html">Datenschutz</a></li>
+            <li><a href="impressum.html">Impressum</a></li>
             </ul>  
         </div><!--/.nav-collapse -->
 
@@ -113,7 +113,7 @@
                     
                     <div class="shellbox">
                         <p class="break">
-                        <span class="blinkingcoursor">$</span><br>
+                        $&nbsp;<span class="blinkingcoursor">&#9646;</span><br>
                         sudo apt-get update <br>
                         sudo apt-get install python-smbus<br>
                         sudo apt-get install i2c-tools<br>
@@ -159,7 +159,7 @@
                     <p>Kopiert nun die lcdSongInfo.py Datei ins Adafruit_CharLCDPlate Verzeichnis.</p>
                     <div class="shellbox">
                         <p class="break">
-                        <span class="blinkingcoursor">$</span><br>
+                        $&nbsp;<span class="blinkingcoursor">&#9646;</span><br>
                         cp lcdSongInfo.py /home/volumio/Adafruit_CharLCDPlate/
                         </p>
                     </div><br>
@@ -181,7 +181,7 @@
             </div>            
         </div>
       </div><!-- /.container -->
-      <a id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" title="Zur&uuml;ck nach oben" ><span class="glyphicon glyphicon-chevron-up"></span></a>
+      <a id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" title="Zur&uuml;ck nach oben" data-toggle="tooltip" data-placement="left"><span class="glyphicon glyphicon-chevron-up"></span></a>
       
 
 
