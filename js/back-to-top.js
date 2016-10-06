@@ -1,8 +1,9 @@
+
 $(document).ready(function(){
-     $(window).scroll(function () {
+         $(window).scroll(function () {
             if ($(this).scrollTop() > 100) {
                 $('#back-to-top').fadeIn();
-            } else {
+                         } else {
                 $('#back-to-top').fadeOut();
             }
         });
@@ -15,6 +16,8 @@ $(document).ready(function(){
             return false;
         });
         
-        $('#back-to-top').tooltip('show');
-
+        $('#back-to-top').tooltip('hide');
+});
+$(document).ready(function(){
+    $('[rel=tooltip]').tooltip({ trigger: "hover" });
 });

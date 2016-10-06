@@ -167,6 +167,9 @@ ul.dropdown-menu>li.active>a:hover{
     color: darkcyan;
 }
 
+.suppress {
+}
+
 .back-to-top {
     display: none;
     color: darkgray;
