@@ -167,9 +167,6 @@ ul.dropdown-menu>li.active>a:hover{
     color: darkcyan;
 }
 
-.suppress {
-}
-
 .back-to-top {
     display: none;
     color: darkgray;
@@ -181,9 +178,9 @@ ul.dropdown-menu>li.active>a:hover{
     overflow: hidden;
     text-indent: 100%;
     white-space: nowrap;
-    background: url(../images/cd-top-arrow.svg) no-repeat center 50%;
-    opacity:0.6;
-    filter:alpha(opacity=60);
+    background: url(../images/cd-top-arrow-white.svg) no-repeat center 50%;
+    opacity:0.7;
+    filter:alpha(opacity=70);
     background-color: lightgray;
     -webkit-transition: opacity .3s 0s, visibility 0s .3s;
     -moz-transition: opacity .3s 0s, visibility 0s .3s;
@@ -204,23 +201,14 @@ ul.dropdown-menu>li.active>a:hover{
 }
 .back-to-top.back-fade-out {
     /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
-    opacity: .5;
+    opacity: .7;
 }
 
 /* .no-touch .back-to-top:hover {
     background-color: #e86256;
     opacity: 1;
 } */
-.back-to-top:hover {
-    background: rgba(255, 255, 255, 1) url(../images/cd-top-arrow.svg) no-repeat center 50%;
-    background-color: #9f9f9f;
-    opacity: 1;
-}
-.back-to-top:active {
-    background: rgba(255, 255, 255, 1) url(../images/cd-top-arrow.svg) no-repeat center 50%;
-    background-color: #9f9f9f;
-    opacity: 1;
-}
+
 
 @media only screen and (min-width: 768px) {
     .back-to-top {
@@ -243,9 +231,15 @@ ul.dropdown-menu>li.active>a:hover{
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
-    background: rgba(255, 255, 255, 1) url(../images/cd-top-arrow.svg) no-repeat center 50%;
+    background: rgba(255, 255, 255, 1) url(../images/cd-top-arrow-green.svg) no-repeat center 50%;
     background-color: #9f9f9f;
     opacity: 1;
     border:0px solid transparent;
 /* this was 1px earlier */
+}
+
+.back-to-top:hover {
+    background: rgba(255, 255, 255, 1) url(../images/cd-top-arrow-light-green.svg) no-repeat center 50%;
+    background-color: #9f9f9f;
+    opacity: 1;
 }
