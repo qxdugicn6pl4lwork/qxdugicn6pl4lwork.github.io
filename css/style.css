@@ -212,10 +212,10 @@ ul.dropdown-menu>li.active>a:hover{
 
 @media only screen and (min-width: 768px) {
     .back-to-top {
-        height: 40px;
-        width: 40px;
-        right: 20px;
-        bottom: 20px;
+        height: 35px;
+        width: 35px;
+        right: 10px;
+        bottom: 10px;
     }
 }
 @media only screen and (min-width: 1024px) {
